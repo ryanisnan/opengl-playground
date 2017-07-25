@@ -29,7 +29,6 @@ class Tile {
 };
 
 void Tile::renderTile() {
-    
     fprintf(stdout, "Tile::renderTile() called");
     glBegin(GL_QUADS);
     glColor3f(0.0f, 0.0f, 0.0f);
@@ -41,7 +40,6 @@ void Tile::renderTile() {
     glColor3f(1.0f, 0.0f, 0.0f);    
     glVertex2f(this->x, this->y + this->height);
     glEnd();
-
 }
 
 void setupDisplay() {
@@ -68,8 +66,6 @@ void setupDisplay() {
 }
 
 int main(int argc, char* argv[]) {
-    cout << "Hello?";
-
     glutInit(&argc, argv);
     
     // Set up the window
