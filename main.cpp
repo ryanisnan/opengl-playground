@@ -31,10 +31,13 @@ void Tile::renderTile() {
     
     fprintf(stdout, "Tile::renderTile() called");
     glBegin(GL_QUADS);
-    glColor3f(this->r, this->g, this->b);
+    glColor3f(1.0f, 0.0f, 0.0f);
     glVertex2f(this->x, this->y);
+    glColor3f(0.0f, 1.0f, 0.0f);
     glVertex2f(this->x + this->width, this->y);
+    glColor3f(0.0f, 0.0f, 1.0f);
     glVertex2f(this->x + this->width, this->y + this->height);
+    glColor3f(0.0f, 0.0f, 0.0f);
     glVertex2f(this->x, this->y + this->height);
     glEnd();
 
@@ -43,16 +46,6 @@ void Tile::renderTile() {
 void setupDisplay() {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    // glBegin(GL_QUADS);
-    // glColor3f(1.0f, 0.0f, 0.0f); // Red
-    // glVertex2f(-0.8f, 0.1f);     // Define vertices in counter-clockwise (CCW) order
-    //   glVertex2f(-0.2f, 0.1f);     //  so that the normal (front-face) is facing you
-    //   glVertex2f(-0.2f, 0.7f);
-    //   glVertex2f(-0.8f, 0.7f);
-    // glEnd();
-
-    // glFlush();
-    Tile* map = new Tile[4];
     Tile *tile1 = new Tile(-1.0f, 0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f);
     Tile *tile2 = new Tile(-0.5f, 0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f);
     Tile *tile3 = new Tile(0.0f, 0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f);
@@ -62,15 +55,7 @@ void setupDisplay() {
     tile2->renderTile();
     tile3->renderTile();
     tile4->renderTile();
-    // Tile *tile2 = new Tile(-0.5f, 0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f);
-    // Tile *tile2 = new Tile(-0.5f, 0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f);
-    // Tile *tile2 = new Tile(-0.5f, 0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f);
-    // Tile *tile2 = new Tile(-0.5f, 0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f);
-    // Tile *tile2 = new Tile(-0.5f, 0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f);
-    // Tile *tile2 = new Tile(-0.5f, 0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f);
-    // Tile *tile2 = new Tile(-0.5f, 0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f);
-
-
+  
     glFlush();
 }
 
