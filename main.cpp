@@ -9,33 +9,14 @@ void setupDisplay() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
 
-    
-    glRotatef(35.0f, 1.0f, 0.0f, 0.0f);
-    glRotatef(75.0f, 0.0f, 1.0f, 0.0f);
-    // glTranslatef(0.0f, 0.0f, 6.0f);
-    
     // Draw stuff
-    glBegin(GL_TRIANGLES);
+    glBegin(GL_QUADS);
     
     glColor3f(0.0f, 1.0f, 0.0f); // Green face
-    glVertex3f(0.0f, 0.5f, 0.0f);
-    glVertex3f(0.5f, -0.5f, 0.5f);
-    glVertex3f(0.5f, -0.5f, -0.5f);
-
-    glColor3f(0.0f, 1.0f, 1.0f); // Yellow face
-    glVertex3f(0.0f, 0.5f, 0.0f);
-    glVertex3f(-0.5f, -0.5f, -0.5f);
-    glVertex3f(0.5f, -0.5f, -0.5f);
-
-    glColor3f(1.0f, 0.0f, 0.0f); // Red face
-    glVertex3f(0.0f, 0.5f, 0.0f);
-    glVertex3f(-0.5f, -0.5f, 0.5f);
-    glVertex3f(0.5f, -0.5f, 0.5f);
-
-    glColor3f(0.0f, 0.0f, 1.0f); // Blue face
-    glVertex3f(0.0f, 0.5f, 0.0f);
-    glVertex3f(-0.5f, -0.5f, 0.5f);
-    glVertex3f(-0.5f, -0.5f, -0.5f);
+    glVertex3f(-0.5f, 0.5f, 0.0f);
+    glVertex3f(-0.5f, -0.5f, 0.0f);
+    glVertex3f(0.5f, -0.5f, 0.0f);
+    glVertex3f(0.5f, 0.5f, 0.0f);
 
     glEnd();
     // glTranslatef(0.0f, 0.0f, -2.0f);
